@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Data files (large / downloaded on demand)
+data/enwik8.zip
+data/enwik8.txt
+data/tinyshakespeare.txt
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Experiment CSV outputs
+experiments/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Env files
+.env
+.env.*
+
+# Codebase memory (local indexing artifact)
+.codebase-memory/
+
+# Stray reference papers — do not commit copyrighted PDFs
+Attention is all you need.pdf

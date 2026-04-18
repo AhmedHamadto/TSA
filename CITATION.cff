@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "Adaptive Computation Depth via Learned Token Routing in Transformers"
+authors:
+  - family-names: "Abdelmuniem Abdalla Mohammed"
+    given-names: "Ahmed"
+    email: "ahmed.abdelmuniem@gmail.com"
+type: software
+license: MIT
+repository-code: "https://github.com/AhmedHamadto/TSA"
+version: "0.1.0"
+date-released: "2026-04-18"
+keywords:
+  - "adaptive computation"
+  - "token routing"
+  - "transformers"
+  - "conditional computation"
+  - "token-selective attention"
+preferred-citation:
+  type: article
+  title: "Adaptive Computation Depth via Learned Token Routing in Transformers"
+  authors:
+    - family-names: "Abdelmuniem Abdalla Mohammed"
+      given-names: "Ahmed"
+      email: "ahmed.abdelmuniem@gmail.com"
+  year: 2026
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:TBD"
+      description: "arXiv identifier (to be filled in after announcement)"

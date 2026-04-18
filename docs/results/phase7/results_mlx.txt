@@ -1,0 +1,15 @@
+Phase 7 enwik8 MLX — Apple MacBook Pro (M1 Pro, 16 GB)
+
+Baseline
+  params=6,350,848  val_loss=1.2826  bpc=1.8504  time=2923s  ms_per_step=585
+  mean_active_frac=1.0000  ops_saved=0.0%
+  steps_to_2.5=500
+  steps_to_2.0=750
+  steps_to_1.8=1000
+
+TSA
+  params=6,433,413  val_loss=1.2774  bpc=1.8429  time=2996s  ms_per_step=599
+  mean_active_frac=0.8326  ops_saved=14.0%
+  steps_to_2.5=500
+  steps_to_2.0=750
+  steps_to_1.8=1000

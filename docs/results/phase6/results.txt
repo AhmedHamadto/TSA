@@ -1,0 +1,30 @@
+Phase 6 Language Results — scale=5m
+d_model=256, n_layers=6, context=128
+
+Baseline (static, random sampling)
+  params=4,782,336  val_loss=1.4422  bpc=2.0806  time=983s
+  mean_active_frac=1.0000
+  steps_to_3.0=250
+  steps_to_2.5=250
+  steps_to_2.0=500
+
+TSA-only (static, random sampling)
+  params=4,864,901  val_loss=1.4482  bpc=2.0893  time=1070s
+  mean_active_frac=0.7262
+  steps_to_3.0=250
+  steps_to_2.5=250
+  steps_to_2.0=500
+
+SGC+Baseline (loss-weighted curriculum)
+  params=4,782,336  val_loss=1.5111  bpc=2.1801  time=993s
+  mean_active_frac=1.0000
+  steps_to_3.0=250
+  steps_to_2.5=250
+  steps_to_2.0=500
+
+Genesis (TSA + SGC, loss-weighted)
+  params=4,864,901  val_loss=1.5044  bpc=2.1704  time=1076s
+  mean_active_frac=0.7184
+  steps_to_3.0=250
+  steps_to_2.5=250
+  steps_to_2.0=500

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsa"
+version = "0.1.0"
+description = "Token-Selective Attention: adaptive computation depth via learned token routing in transformers"
+authors = [
+    {name = "Ahmed Abdelmuniem Abdalla Mohammed", email = "ahmed.abdelmuniem@gmail.com"},
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+readme = "README.md"
+dependencies = [
+    "torch>=2.0",
+    "wandb>=0.16",
+    "pyyaml>=6.0",
+    "numpy>=1.24",
+    "tqdm>=4.65",
+    "matplotlib>=3.10.8",
+]
+
+[project.optional-dependencies]
+mlx = [
+    "mlx>=0.31.1",
+]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+
+[project.urls]
+Repository = "https://github.com/AhmedHamadto/TSA"
+Paper = "https://arxiv.org/abs/TBD"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

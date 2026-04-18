@@ -1,0 +1,89 @@
+\begin{thebibliography}{}
+
+\bibitem[{Apple Machine Learning Research}, 2023]{mlx2023}
+{Apple Machine Learning Research} (2023).
+\newblock {MLX}: An array framework for {Apple} silicon.
+\newblock \url{https://github.com/ml-explore/mlx}.
+
+\bibitem[Ba et~al., 2016]{ba2016layernorm}
+Ba, J.~L., Kiros, J.~R., and Hinton, G.~E. (2016).
+\newblock Layer normalization.
+\newblock In {\em arXiv preprint arXiv:1607.06450}.
+
+\bibitem[Bae et~al., 2025]{bae2025mor}
+Bae, S., Hwang, Y., Noh, J., Kim, M., Yoo, K.~H., and Yoo, C.~D. (2025).
+\newblock Mixture of recursions: Learning dynamic recursive depths for adaptive
+  token-level computation.
+\newblock In {\em International Conference on Machine Learning (ICML)}.
+
+\bibitem[Brown et~al., 2020]{brown2020gpt3}
+Brown, T.~B. et~al. (2020).
+\newblock Language models are few-shot learners.
+\newblock {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  33.
+
+\bibitem[Chen et~al., 2025]{chen2025itt}
+Chen, Y., Wang, J., Luo, Z., Wang, X., Li, G., Zhao, Z., Zeng, X., Liu, T.,
+  Ding, B., and Zhou, J. (2025).
+\newblock Inner thinking transformer: Leveraging dynamic depth scaling to
+  foster adaptive internal thinking.
+\newblock In {\em Proceedings of the Annual Meeting of the Association for
+  Computational Linguistics (ACL)}.
+
+\bibitem[Dehghani et~al., 2019]{dehghani2019universal}
+Dehghani, M., Gouws, S., Vinyals, O., Uszkoreit, J., and Kaiser, L. (2019).
+\newblock Universal transformers.
+\newblock In {\em International Conference on Learning Representations (ICLR)}.
+
+\bibitem[Elbayad et~al., 2020]{elbayad2020depth}
+Elbayad, M., Gu, J., Grave, E., and Auli, M. (2020).
+\newblock Depth-adaptive transformer.
+\newblock In {\em International Conference on Learning Representations (ICLR)}.
+
+\bibitem[Fedus et~al., 2022]{fedus2022switch}
+Fedus, W., Zoph, B., and Shazeer, N. (2022).
+\newblock Switch transformers: Scaling to trillion parameter models with simple
+  and efficient sparsity.
+\newblock {\em Journal of Machine Learning Research}, 23(120):1--39.
+
+\bibitem[Graves, 2016]{graves2016act}
+Graves, A. (2016).
+\newblock Adaptive computation time for recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1603.08983}.
+
+\bibitem[Hutter, 2006]{hutter2006prize}
+Hutter, M. (2006).
+\newblock The hutter prize.
+\newblock \url{http://prize.hutter1.net/}.
+
+\bibitem[Karpathy, 2015]{karpathy2015charray}
+Karpathy, A. (2015).
+\newblock char-rnn.
+\newblock \url{https://github.com/karpathy/char-rnn}.
+
+\bibitem[Loshchilov and Hutter, 2019]{loshchilov2019adamw}
+Loshchilov, I. and Hutter, F. (2019).
+\newblock Decoupled weight decay regularization.
+\newblock In {\em International Conference on Learning Representations (ICLR)}.
+
+\bibitem[Press and Wolf, 2017]{press2017tying}
+Press, O. and Wolf, L. (2017).
+\newblock Using the output embedding to improve language models.
+\newblock {\em Proceedings of the Conference of the European Chapter of the
+  Association for Computational Linguistics (EACL)}.
+
+\bibitem[Raposo et~al., 2024]{raposo2024mixture}
+Raposo, D., Ritter, S., Richards, B., Lillicrap, T., Humphreys, P.~C., and
+  Santoro, A. (2024).
+\newblock Mixture-of-depths: Dynamically allocating compute in
+  transformer-based language models.
+\newblock {\em arXiv preprint arXiv:2404.02258}.
+
+\bibitem[Vaswani et~al., 2017]{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
+  Kaiser, L., and Polosukhin, I. (2017).
+\newblock Attention is all you need.
+\newblock {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  30.
+
+\end{thebibliography}

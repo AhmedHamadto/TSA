@@ -1,0 +1,52 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#d4e6f1', 'primaryTextColor': '#222', 'primaryBorderColor': '#555', 'lineColor': '#555', 'secondaryColor': '#f9e79f', 'tertiaryColor': '#d5f5e3', 'fontSize': '14px'}}}%%
+flowchart TB
+    input["<i>h</i> &nbsp;(token embeddings)"]
+    stem["<b>Block f₀ &nbsp;(stem)</b><br/><i style='color:#7d3c98;font-size:11px'>always active</i>"]
+    h_state["<b><i>h</i></b>"]
+    router["<b>Router r<sub>l</sub></b><br/>σ(MLP(<i>h</i>)) → <b style='color:#c0392b'>p<sub>l</sub></b>"]
+
+    input --> stem
+    stem --> h_state
+    h_state --> router
+
+    subgraph train["<b>Training</b> &nbsp;— soft gating"]
+        direction TB
+        t_block["<b>Block f<sub>l+1</sub></b><br/><i style='font-size:11px'>attn + FFN</i><br/><i style='font-size:10px;color:#888'>always runs all tokens</i>"]
+        t_delta["Δ<sup>attn</sup>, &nbsp;Δ<sup>ffn</sup>"]
+        t_gate["<i>h</i> ← <i>h</i> + (1 − p<sub>l</sub>) · Δ<br/><i style='font-size:10px;color:#888'>continuous, differentiable</i>"]
+        t_block --> t_delta --> t_gate
+    end
+
+    subgraph infer["<b>Inference</b> &nbsp;— hard gating"]
+        direction TB
+        i_attn["<b>Attention</b><br/><i style='font-size:10px;color:#888'>dense, all tokens</i>"]
+        i_thresh{"p<sub>l</sub> &gt; 0.5 ?"}
+        i_active["<b>Gather → FFN → Scatter</b><br/><i style='font-size:10px;color:#888'>real FLOPs savings</i>"]
+        i_skip["<b>FFN skipped</b>"]
+        i_merge((" "))
+        i_attn --> i_thresh
+        i_thresh -->|"no (active)"| i_active --> i_merge
+        i_thresh -->|"yes (halted)"| i_skip --> i_merge
+    end
+
+    router --> train
+    router --> infer
+
+    t_gate --> output["<b><i>h</i></b> &nbsp;(updated)"]
+    i_merge --> output
+
+    style stem fill:#e8daef,stroke:#555,stroke-width:1.5px
+    style router fill:#f9e79f,stroke:#555,stroke-width:1.5px
+    style input fill:none,stroke:none,color:#666
+    style output fill:none,stroke:none,color:#666
+    style h_state fill:none,stroke:none,font-size:16px
+    style t_block fill:#d4e6f1,stroke:#555,stroke-width:1.5px
+    style t_delta fill:none,stroke:none,color:#444
+    style t_gate fill:#d5f5e3,stroke:#555,stroke-width:1.5px
+    style i_attn fill:#d4e6f1,stroke:#555,stroke-width:1.5px
+    style i_thresh fill:#fdebd0,stroke:#555,stroke-width:1.5px
+    style i_active fill:#d5f5e3,stroke:#555,stroke-width:1.5px
+    style i_skip fill:#fadbd8,stroke:#555,stroke-width:1.5px
+    style i_merge fill:none,stroke:none
+    style train fill:#f0f6ff,stroke:#5b9bd5,stroke-width:1.5px,stroke-dasharray:5 5
+    style infer fill:#f0fff0,stroke:#70ad47,stroke-width:1.5px,stroke-dasharray:5 5
